@@ -17,12 +17,12 @@ function Status () {
     }, [])
     
     return (
-        <section>
-            <p className="">Ordernummer <span>#{orderNumber}</span></p>
-            <img src={logo} alt="img" />
-            <h2>Din beställning är på väg</h2>
-            <h3>{eta} minuter</h3>
-            <button className='btn--light'>Ok, cool!</button>
+        <section className='status'>
+            <p className="status__orderNr">Ordernummer <span>#{orderNumber}</span></p>
+            <img className='status__img' src={logo} alt="img" />
+            <h2 className='status__heading'>Din beställning är på väg!</h2>
+            <h3 className='status__eta'><span>{eta}</span> minuter</h3>
+            <button className='btn btn--light'>Ok, cool!</button>
         </section>
     )
 }
