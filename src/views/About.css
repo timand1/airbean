@@ -1,0 +1,10 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #F3E4E1;
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    font-family: 'PT Serif', serif;
+
+}
