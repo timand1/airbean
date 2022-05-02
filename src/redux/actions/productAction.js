@@ -12,4 +12,12 @@ const removeProduct = (product) => {
     }
 }
 
-export { addProduct, removeProduct }
+const addDiscount = (numDiscount) => {
+    return {
+        type: 'ADD_DISCOUNT',
+        payload: numDiscount
+    }
+}
+
+
+export { addProduct, removeProduct, addDiscount }
