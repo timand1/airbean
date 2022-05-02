@@ -1,0 +1,30 @@
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item article {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-button {
+    border: none;
+    background: #000;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-desc {
+    font-size: 12px;
+}
+
+.menu-item p {
+    margin: 0;
+}
