@@ -10,7 +10,7 @@ const productReducer = (state = initialState, action) => {
             }
         case 'REMOVE_PRODUCT':
             const copyProductsArray = [...state.products];
-            const newProductsArray = copyProductsArray.filter(todo => todo.id !== action.payload)
+            const newProductsArray = copyProductsArray.filter(product => product.id !== action.payload)
             return {
 
                 products: newProductsArray
