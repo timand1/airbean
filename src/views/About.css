@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #F3E4E1;
     width: 100vw;
     height: 100vh;
@@ -19,30 +20,29 @@
 .about-text h1 {
     font-size: 42px;
     font-family: 'PT Serif', serif;
+    margin-bottom: 1rem;
 }
 
 .about-text h3 {
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
+    margin-bottom: 1rem;
 }
 
 .about-text p {
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.about-eva {
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .about-eva img {
     border-radius: 100%;
-    margin-bottom: 0;
 }
 
-.about-eva h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: 'PT Serif', serif;
-}
 
-.about-eva p {
-    margin-top: 0;
-    font-family: 'PT Serif', serif;
-}
