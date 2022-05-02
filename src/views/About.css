@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F3E4E1;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.about-text {   
+    text-align: left;
+    padding: 0 2.5rem;
+}
+
+.about-text h1 {
+    font-size: 42px;
+    font-family: 'PT Serif', serif;
+}
+
+.about-text h3 {
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.about-text p {
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.about-eva img {
+    border-radius: 100%;
+    margin-bottom: 0;
+}
+
+.about-eva h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-eva p {
+    margin-top: 0;
+}
