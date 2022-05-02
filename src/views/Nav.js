@@ -1,9 +1,7 @@
 function Nav() {
 
-
-
-    return(
-
+    return (
+        <section></section>
     )
 }
 
