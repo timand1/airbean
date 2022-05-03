@@ -7,7 +7,10 @@ import footerGraphic from '../assets/graphics/graphics-footer.svg';
 
 export default function Menu(props) {
     const { showCartButton, setShowCartButton } = props
-    setShowCartButton(true)
+    useEffect(() => {
+        setShowCartButton(true)
+    }, [])
+
     const URL = 'https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu';
 
     const [products, setProducts] = useState([]);

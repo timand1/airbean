@@ -14,8 +14,6 @@ function Status() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-
-    console.log(productList.length)
     useEffect(() => {
         const data = async () => {
             const response = await fetch('https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/order')
@@ -39,14 +37,14 @@ function Status() {
                     <img className='status__img' src={logo} alt="img" />
                     <h2 className='status__heading'>Din beställning är på väg!</h2>
                     <h3 className='status__eta'><span>{eta}</span> minuter</h3>
-                    <button className='btn btn--light' onClick={ handleClick }>Ok, cool!</button>
+                    <button className='btn btn--light' onClick={handleClick}>Ok, cool!</button>
                 </section>}
             {productList.length === 0 &&
                 <section className='status'>
                     <p className="status__orderNr"></p>
                     <img className='status__img' src={logo} alt="img" />
                     <h2 className='status__heading'>Ooops, här var det tomt</h2>
-                    <button className='btn btn--light' onClick={ handleClick }> Give me coffeeee!</button>
+                    <button className='btn btn--light' onClick={handleClick}> Give me coffeeee!</button>
                 </section>}
         </article>
     )
