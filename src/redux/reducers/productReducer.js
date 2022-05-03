@@ -1,28 +1,33 @@
 const initialState = {
     products: [],
-    totalCost: 0
+    totalCost: 0,
+    discount: 0
 }
 
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_PRODUCT':
             return {
+                ...state,
                 products: [...state.products, action.payload],
                 totalCost: state.totalCost + action.payload.price
             }
         case 'REMOVE_PRODUCT':
-            const productIndex = state.products.findIndex(product => product.id === action.payload.id);
+            // To keep the cart list 'static'
+            const productIndex = state.products.lastIndexOf(action.payload);
             const copyProductsArray = [...state.products];
-            copyProductsArray.splice(productIndex, 1)
-            // const newProductsArray = copyProductsArray.filter(product => product.id !== action.payload);
+            copyProductsArray.splice(productIndex, 1);
+
             return {
+                ...state,
                 products: copyProductsArray,
                 totalCost: state.totalCost - action.payload.price
             }
         case 'ADD_DISCOUNT':
+            const totalDiscount = 38 * action.payload
             return {
                 ...state,
-                totalCost: state.totalCost - (38 * action.payload)
+                discount: parseInt(totalDiscount)
             }
         default:
             return state
