@@ -29,6 +29,13 @@ const productReducer = (state = initialState, action) => {
                 ...state,
                 discount: parseInt(totalDiscount)
             }
+        case 'EMPTY_CART':
+            return {
+                ...state,
+                products: [],
+                totalCost: 0,
+                discount: 0
+            }
         default:
             return state
     }
