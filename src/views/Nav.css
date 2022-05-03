@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+}
+.close-btn {
+    height: 20px;
+    width: 30px;
+    background: #FFF;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
