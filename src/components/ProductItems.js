@@ -14,13 +14,33 @@ export default function ProductItems(props) {
     }
 
     return (
-        <section id={id} className="menu-item">
-            <button style={{ backgroundImage: `url(${addButton})` }} className='add-button' onClick={addToCart}></button>
-            <article>
-                <p className='product-title'>{product.title}</p>
-                <p className='product-desc'>{product.desc}</p>
-            </article>
-            <p className='product-price'>{product.price}kr</p>
+        <section id={id} className="flex menu-item">
+            
+            <div className='flex product-container'>
+
+                <div className='flex'>
+
+                    <div className='flex btn-container'>
+                        <button style={{ backgroundImage: `url(${addButton})` }} className='add-button' onClick={addToCart}></button>
+                    </div>                   
+                                       
+                    <div className='flex col'>
+
+                            <div className='flex container-row-1'>
+                                <p className='p-title'>{product.title}</p>
+                                <p className='p-price'>{product.price}kr</p>
+                            </div>
+
+                            <div className='flex container-row-2'>
+                                <p className='product-desc'>{product.desc}</p>
+                            </div>
+
+                        </div>                      
+                    </div>
+                </div>
+
+
+
         </section>
     )
 }
