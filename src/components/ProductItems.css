@@ -6,13 +6,19 @@
     flex-direction: column;
 }
 
-.root {}
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
 
 .menu-item {
     justify-content: center;
 }
 
-.menu-item article {}
 
 .product-title {
     font-size: 20px;
