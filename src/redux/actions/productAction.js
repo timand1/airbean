@@ -19,5 +19,12 @@ const addDiscount = (numDiscount) => {
     }
 }
 
+const emptyCart = (product) => {
+    return {
+        type: 'EMPTY_CART',
+        payload: product
+    }
+}
 
-export { addProduct, removeProduct, addDiscount }
+
+export { addProduct, removeProduct, addDiscount, emptyCart }
