@@ -5,4 +5,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.landing__logo {
+    z-index: 5;
+}
+
+.leaves {
+    height: 100%;
+    position: absolute;
+    
+}
+.leaves--right {
+    right: 0;
+}
+.leaves--left {
+    left: 0;
 }
