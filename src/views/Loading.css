@@ -1,0 +1,11 @@
+.loading-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
