@@ -28,6 +28,20 @@
     }
 }
 
+.slide-out {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
 .nav-btn-container {}
 
 .menu-btn-container {
