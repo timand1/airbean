@@ -3,12 +3,15 @@ import Header from '../components/Header';
 import eva from '../assets/graphics/eva-cortado.jpg';
 import headerGraphic from '../assets/graphics/graphics-header.svg';
 import footerGraphic from '../assets/graphics/graphics-footer.svg';
+import { useState } from 'react';
 
-function About() {
+function About(props) {
+const {showCartButton, setShowCartButton} = props
+   setShowCartButton(false)
     return (
         <main className='about-section'>
             <img src={headerGraphic} alt="leaves" className="graphics graphics-header" />
-            <Header />
+            <Header showCartButton= {showCartButton}/>
             <section className='about-text'>
                 <h1>Vårt kaffe</h1>
                 <h3>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper,

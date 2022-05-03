@@ -5,8 +5,9 @@ import Header from "../components/Header";
 import headerGraphic from '../assets/graphics/graphics-header.svg';
 import footerGraphic from '../assets/graphics/graphics-footer.svg';
 
-export default function Menu() {
-
+export default function Menu(props) {
+    const {showCartButton, setShowCartButton} = props
+    setShowCartButton(true)
     const URL = 'https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu';
 
     const [products, setProducts] = useState([]);
@@ -23,7 +24,7 @@ export default function Menu() {
     return (
         <section className="menu">
             <img src={headerGraphic} alt="leaves" className="graphics graphics-header" />
-            <Header />
+            <Header showCartButton={showCartButton} />
             <h1 className="menu-headline">Meny</h1>
             <article className="products">{productItem}</article>
             <img src={footerGraphic} alt="leaves" className="graphics graphics-footer" />
