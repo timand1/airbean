@@ -14,8 +14,8 @@
 
 .add-button {
     width: 45px;
+    max-width: 32px;
     max-height: 32px;
-    aspect-ratio: 1;
     border: none;
     background: #000;
     color: #FFF;
