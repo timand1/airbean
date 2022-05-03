@@ -1,19 +1,12 @@
-.flex{
-    display: flex;
-}
+.flex{display: flex;}
+.col{flex-direction: column;}
 
-.col{
-    flex-direction: column;
-}
 .root{
 
 }
 
 .menu-item { 
     justify-content: center;
-}
-
-.menu-item article {
 }
 
 .product-title {
