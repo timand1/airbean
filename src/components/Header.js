@@ -62,7 +62,7 @@ export default function Header() {
                         <h2>Total {totalCost - totalDiscount} kr</h2>
                         <p>inkl moms + drönarleverans</p>
                     </article>
-                    <button className='button button-cart' onClick={() => navigate('/status')}>Take my money!</button>
+                    <button className='button button-cart' onClick={() => navigate('/loading')}>Take my money!</button>
                 </section>}
             {cartList.length > 0 &&
                 <section className='cart-overlay' style={showCart ? { display: 'block' } : { display: 'none' }}  >

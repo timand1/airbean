@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     background: transparent;
+    width: 100%;
 }
 
 .nav-btn {
@@ -25,7 +26,7 @@
 
 .cart {
     border: none;
-    background: #000;
+    background: #2F2926;
     border-radius: 50%;
     padding: 1rem;
     position: relative;
@@ -50,6 +51,9 @@
 
 .cart-headline {
     margin-bottom: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .cart-list {
@@ -85,6 +89,11 @@
 
 .cart-price {
     margin-bottom: 3rem;
+}
+
+.cart-price h2 {
+    font-size: 24px;
+    font-family: 'PT Serif', serif;
 }
 
 .cart-price p {

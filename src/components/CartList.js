@@ -27,8 +27,8 @@ export default function CartList(props) {
     return (
         <section id={product.id} className='cart-item' >
             <article>
-                <p>{product.title}</p>
-                <p>{product.price * amount} kr</p>
+                <p className='cart-title'>{product.title}</p>
+                <p className='cart-price'>{product.price * amount} kr</p>
             </article>
             <article className='cart-amount'>
                 <button className='cart-button' style={{ backgroundImage: `url(${upArrow})` }} onClick={addCart}></button>
