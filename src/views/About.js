@@ -1,9 +1,14 @@
 import './About.css';
+import Header from '../components/Header';
 import eva from '../assets/graphics/eva-cortado.jpg';
+import headerGraphic from '../assets/graphics/graphics-header.svg';
+import footerGraphic from '../assets/graphics/graphics-footer.svg';
 
 function About() {
     return (
         <main className='about-section'>
+            <img src={headerGraphic} alt="leaves" className="graphics graphics-header" />
+            <Header />
             <section className='about-text'>
                 <h1>Vårt kaffe</h1>
                 <h3>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper,
@@ -15,7 +20,7 @@ function About() {
                     macchiato sit extraction instant grinder seasonal organic, turkish single shot, single origin,
                     and robusta strong to go so dripper. Viennese froth, grounds caramelization skinny aromatic cup
                     kopi-luwak, fair trade flavour, frappuccino medium, café au lait flavour cultivar ut bar instant
-                    kopi-luwak. 
+                    kopi-luwak.
                 </p>
                 <p>
                     Roast id macchiato, single shot siphon mazagran milk fair trade est aroma a half
@@ -28,10 +33,11 @@ function About() {
             </section>
 
             <figure className='about-eva'>
-                <img src={ eva } alt="Picture of founder, Eva Cortado" />
+                <img src={eva} alt="Picture of founder, Eva Cortado" />
                 <h2>Eva Cortado</h2>
                 <p>VD & Grundare</p>
             </figure>
+            <img src={footerGraphic} alt="leaves" className="graphics graphics-footer" />
         </main>
     )
 }

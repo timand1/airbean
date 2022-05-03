@@ -14,3 +14,18 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+.graphics {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.graphics-header {
+    top: 0;
+}
+
+.graphics-footer {
+    bottom: 0;
+}

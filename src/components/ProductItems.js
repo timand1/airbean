@@ -20,7 +20,7 @@ export default function ProductItems(props) {
                 <p className='product-title'>{product.title}</p>
                 <p className='product-desc'>{product.desc}</p>
             </article>
-            <p className='product-price'>{product.price} kr</p>
+            <p className='product-price'>{product.price}kr</p>
         </section>
     )
 }

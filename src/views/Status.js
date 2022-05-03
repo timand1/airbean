@@ -31,7 +31,7 @@ function Status() {
                     <h3 className='status__eta'><span>{eta}</span> minuter</h3>
                     <button className='btn btn--light' onClick={() => navigate('/menu')}>Ok, cool!</button>
                 </section>}
-            {productList.length == 0 &&
+            {productList.length === 0 &&
                 <section className='status'>
                     <p className="status__orderNr"></p>
                     <img className='status__img' src={logo} alt="img" />

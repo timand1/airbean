@@ -13,8 +13,9 @@
 }
 
 .add-button {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    max-height: 32px;
+    aspect-ratio: 1;
     border: none;
     background: #000;
     color: #FFF;
@@ -22,6 +23,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
+    padding: 0;
+    margin-top: 6px;
 }
 
 .product-title {
@@ -31,8 +34,14 @@
 
 .product-desc {
     font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .menu-item p {
     margin: 0;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 700;
 }
