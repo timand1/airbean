@@ -1,4 +1,55 @@
-img {
-    width: 100px;
-    height: 100px;
+.status {
+    background-color: #E5674E;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.status__orderNr {
+    font-family: 'Work Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    
+}
+.status__orderNr span {
+    font-weight: 700;
+}
+.status__img {
+    width: 250px;
+  
+    margin: 2.5rem;
+}
+
+.status__heading {
+    font-family: 'PT Serif', serif;
+    color: #fff;
+    font-size: 2.25rem;
+    margin: 3.5rem;
+    margin-top: 0;
+}
+
+.status__eta {
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.375rem;
+    color: #fff;
+    
+}
+.status__eta span{
+    font-weight: 700;    
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 0.65rem 3rem 0.65rem 3rem;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: #2F2926;
+    font-size: 1.5rem;
+}
+
+.btn--light {
+    background-color: #fff;
+    border: 1px solid #fff;
+    margin-top: 4rem
 }
