@@ -13,7 +13,6 @@ function Nav() {
 
     return (
         <section className='flex nav-container'>
-
             <div className='flex close-btn-container'>
                 <button className='close-btn' onClick={() => navigate(-1)} style={{ backgroundImage: `url(${close})` }} ></button>
             </div>
@@ -27,10 +26,6 @@ function Nav() {
                 <button className='menu-btn' onClick={ () => navigate('/status')} >Orderstatus</button>
                 <div className='border'></div>  
             </div>
-            
-
-            
-
         </section>
     )
 }
