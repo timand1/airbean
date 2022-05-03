@@ -21,6 +21,7 @@
 }
 
 .status__heading {
+    text-align: center;
     font-family: 'PT Serif', serif;
     color: #fff;
     font-size: 2.25rem;
