@@ -12,16 +12,24 @@ function Nav() {
    
 
     return (
-        <section className='nav'>
-            <button className='close-btn' onClick={() => navigate(-1)} style={{ backgroundImage: `url(${close})` }} ></button>
+        <section className='flex nav-container'>
+
+            <div className='flex close-btn-container'>
+                <button className='close-btn' onClick={() => navigate(-1)} style={{ backgroundImage: `url(${close})` }} ></button>
+            </div>
+
+            <div className='flex menu-btn-container'>              
+                
+                <button className='menu-btn'onClick={ () => navigate('/menu')}>Meny</button>
+                <div className='border'></div>
+                <button className='menu-btn' onClick={ () => navigate('/about')}>Vårt kaffe</button>
+                <div className='border'></div>            
+                <button className='menu-btn' onClick={ () => navigate('/status')} >Orderstatus</button>
+                <div className='border'></div>  
+            </div>
             
 
-            <button>Meny</button>
             
-            
-            <button>Vårt kaffe</button>
-            
-            <button>Orderstatus</button>
 
         </section>
     )
