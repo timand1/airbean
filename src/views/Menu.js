@@ -14,14 +14,14 @@ export default function Menu() {
             .then(res => res.json())
             .then(data => setProducts(data))
             .catch(err => console.log(`Error : ${err}`))
-    }, [])
+    }, []);
 
-    const productItem = products.map((product, index) => <ProductItems key={index} id={index} product={product} />)
+    const productItem = products.map((product, index) => <ProductItems key={index} id={index} product={product} />);
 
     return (
-        <section>
+        <section className="menu">
             <Header />
-            <h1>Meny</h1>
+            <h1 className="menu-headline">Meny</h1>
             <article className="products">{productItem}</article>
         </section>
     )

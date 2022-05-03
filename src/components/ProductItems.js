@@ -1,4 +1,6 @@
 import './ProductItems.css';
+import addButton from '../assets/graphics/add.svg'
+
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../redux/actions/productAction';
 
@@ -13,7 +15,7 @@ export default function ProductItems(props) {
 
     return (
         <section id={id} className="menu-item">
-            <button className='add-button' onClick={addToCart}>+</button>
+            <button style={{ backgroundImage: `url(${addButton})` }} className='add-button' onClick={addToCart}></button>
             <article>
                 <p className='product-title'>{product.title}</p>
                 <p className='product-desc'>{product.desc}</p>

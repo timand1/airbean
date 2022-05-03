@@ -1,38 +1,40 @@
+import './CartList.css'
+
 import { useSelector, useDispatch } from 'react-redux';
-import { addProduct, removeProduct, addDiscount } from '../redux/actions/productAction';
+import { addProduct, removeProduct } from '../redux/actions/productAction';
+
+import downArrow from '../assets/graphics/arrow-down.svg';
+import upArrow from '../assets/graphics/arrow-up.svg';
 
 export default function CartList(props) {
-    const { product, id } = props;
+    const { product, id, checkDiscount } = props;
     const productList = useSelector(state => state.products);
-
     const dispatch = useDispatch();
 
     const uniqueProduct = productList.filter(product => product.id === id);
     let amount = uniqueProduct.length;
 
-    let discountAmount = 0;
-
-    if (productList.find(product => product.title === 'Bryggkaffe') && productList.find(product => product.title === 'Gustav Adolfsbakelse')) {
-        discountAmount = discountAmount + 1
-        // dispatch(addDiscount(discountAmount))
-        console.log(discountAmount)
-    }
-
     function removeCart() {
         dispatch(removeProduct(product))
+        checkDiscount();
     }
 
     function addCart() {
         dispatch(addProduct(product))
+        checkDiscount();
     }
 
     return (
-        <section id={product.id} >
-            <p>{product.title}</p>
-            <p>{product.price * amount} kr</p>
-            <p>{amount}</p>
-            <button onClick={addCart}>ADD</button>
-            <button onClick={removeCart} >REMOVE</button>
+        <section id={product.id} className='cart-item' >
+            <article>
+                <p>{product.title}</p>
+                <p>{product.price * amount} kr</p>
+            </article>
+            <article className='cart-amount'>
+                <button className='cart-button' style={{ backgroundImage: `url(${upArrow})` }} onClick={addCart}></button>
+                <p>{amount}</p>
+                <button className='cart-button' style={{ backgroundImage: `url(${downArrow})` }} onClick={removeCart} ></button>
+            </article>
         </section>
     )
 }
