@@ -18,7 +18,6 @@ function App() {
         <Route path='/nav' element={<Nav />} />
         <Route path='/status' element={<Status />} />
         <Route path='*' element={<ErrorPage />} />
-        <Route path='/' element={<Menu />} />
       </Routes>
     </div>
   );
