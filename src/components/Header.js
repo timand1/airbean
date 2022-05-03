@@ -21,7 +21,6 @@ export default function Header() {
         setShowCart(!showCart)
     }
 
-
     useEffect(() => {
         checkDiscount()
     }, [productList])
@@ -41,12 +40,13 @@ export default function Header() {
         }
     }
 
-    const uniqueCart = [...new Set(productList)];
+    const uniqueCart = [...new Map(productList.map((cartItem) => [cartItem['id'], cartItem])).values(),];
+
     const cartList = uniqueCart.map((product, index) => <CartList product={product} key={index} id={product.id} checkDiscount={checkDiscount} />);
 
     return (
         <header className='nav'>
-            <div className='nav-btn 'onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
+            <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
             <button className='cart' onClick={(displayCart)}>
                 <span className="material-symbols-outlined">

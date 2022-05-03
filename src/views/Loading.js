@@ -1,13 +1,16 @@
 import loader from '../assets/graphics/loader.png'
 import { useNavigate } from 'react-router-dom';
 import '../views/Loading.css'
+import { useEffect } from 'react';
 
 function Loading() {
     const navigate = useNavigate();
 
-    setTimeout(() => {
-        navigate('/status')
-    }, 3000);
+    useEffect(() => {
+        setTimeout(() => {
+            navigate('/status')
+        }, 3000);
+    }, [])
 
     return (
         <main className='loading-view'>

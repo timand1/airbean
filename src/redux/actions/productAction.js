@@ -26,5 +26,12 @@ const emptyCart = (product) => {
     }
 }
 
+const getLocalCart = (product) => {
+    return {
+        type: 'LOCAL_CART',
+        payload: product
+    }
+}
 
-export { addProduct, removeProduct, addDiscount, emptyCart }
+
+export { addProduct, removeProduct, addDiscount, emptyCart, getLocalCart }

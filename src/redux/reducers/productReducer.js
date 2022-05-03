@@ -7,6 +7,9 @@ const initialState = {
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_PRODUCT':
+            const productsArray = [...state.products];
+            productsArray.push(action.payload)
+            localStorage.setItem("cart", JSON.stringify(productsArray));
             return {
                 ...state,
                 products: [...state.products, action.payload],
@@ -18,6 +21,7 @@ const productReducer = (state = initialState, action) => {
             const copyProductsArray = [...state.products];
             copyProductsArray.splice(productIndex, 1);
 
+            localStorage.setItem("cart", JSON.stringify(copyProductsArray));
             return {
                 ...state,
                 products: copyProductsArray,
@@ -30,11 +34,24 @@ const productReducer = (state = initialState, action) => {
                 discount: parseInt(totalDiscount)
             }
         case 'EMPTY_CART':
+            localStorage.removeItem('cart');
+
             return {
-                ...state,
                 products: [],
                 totalCost: 0,
                 discount: 0
+            }
+        case 'LOCAL_CART':
+            let price = 0;
+            const localArray = [...action.payload];
+            console.log(localArray)
+            for (let i = 0; i < localArray.length; i++) {
+                price += localArray[i].price;
+            }
+            return {
+                ...state,
+                products: localArray,
+                totalCost: price
             }
         default:
             return state
