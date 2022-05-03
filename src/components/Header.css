@@ -64,10 +64,11 @@
     height: 90%;
     border-radius: 5px;
     background: #FFF;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     z-index: 2;
     flex-direction: column;
     justify-content: space-between;
+    height: fit-content;
 }
 
 .cart-items {
@@ -88,7 +89,7 @@
 }
 
 .cart-price {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .cart-price h2 {

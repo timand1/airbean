@@ -6,6 +6,16 @@
 .cart-title {
     font-size: 20px;
     font-weight: 700;
+    float: left;
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cart-title:after {
+    font-size: .8rem;
+    color: #00000040;
+    content: " .........................................................................................."
 }
 
 .cart-price {
@@ -31,4 +41,5 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
+
 }

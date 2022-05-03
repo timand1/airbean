@@ -8,10 +8,10 @@ export default function ErrorPage() {
     return (
         <section className='error-page'>
             <img src={headerGraphic} alt="leaves" className="graphics graphics-header" />
-            <h1>404</h1>
-            <p>I think you accidentally accessed Ida's code</p>
+            <h1>Hey</h1>
+            <p>You wont find any coffee here</p>
             <p>We're sorry</p>
-            <p>- Tim, Julia and Pelle</p>
+            <p>Sincerely, Mighty Gardeners</p>
             <button className="error-button" onClick={() => { navigate('/') }}>Take me back</button>
             <img src={footerGraphic} alt="leaves" className="graphics graphics-footer" />
         </section>

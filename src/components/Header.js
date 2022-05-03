@@ -50,12 +50,12 @@ export default function Header(props) {
             <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
             {showCartButton &&
-            <button className='cart' onClick={(displayCart)}>
-                <span className="material-symbols-outlined">
-                    lock
-                </span>
-                <p className="cart-counter">{productList.length}</p>
-            </button>}
+                <button className='cart' onClick={(displayCart)}>
+                    <span className="material-symbols-outlined">
+                        lock
+                    </span>
+                    <p className="cart-counter">{productList.length}</p>
+                </button>}
             {cartList.length > 0 &&
                 <section className='cart-list' style={showCart ? { display: 'flex' } : { display: 'none' }}  >
                     <h2 className='cart-headline'>Din Beställning</h2>
