@@ -7,7 +7,8 @@ import CartList from "./CartList"
 
 import navButton from '../assets/graphics/navicon.svg'
 
-export default function Header() {
+export default function Header(props) {
+    const { showCartButton } = props
     const productList = useSelector(state => state.products);
     const totalCost = useSelector(state => state.totalCost);
     const totalDiscount = useSelector(state => state.discount);
@@ -48,12 +49,13 @@ export default function Header() {
         <header className='nav'>
             <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
+            {showCartButton &&
             <button className='cart' onClick={(displayCart)}>
                 <span className="material-symbols-outlined">
                     lock
                 </span>
                 <p className="cart-counter">{productList.length}</p>
-            </button>
+            </button>}
             {cartList.length > 0 &&
                 <section className='cart-list' style={showCart ? { display: 'flex' } : { display: 'none' }}  >
                     <h2 className='cart-headline'>Din Beställning</h2>
