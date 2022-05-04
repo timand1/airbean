@@ -19,6 +19,18 @@
     margin: 2.5rem;
 }
 
+.sent {
+    animation: wiggle .8s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   25% { transform: rotate(5deg); }
+   50% { transform: rotate(0deg); }
+   75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .status__heading {
     text-align: center;
     font-family: 'PT Serif', serif;
