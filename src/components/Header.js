@@ -47,7 +47,7 @@ export default function Header(props) {
 
     return (
         <header className='nav'>
-            <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
+            <div className='nav-btn' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
             {showCartButton &&
                 <button className='cart' onClick={(displayCart)}>
