@@ -33,7 +33,7 @@ function Status() {
             {productList.length > 0 &&
                 <section className='status'>
                     <p className="status__orderNr">Ordernummer <span>#{orderNumber}</span></p>
-                    <img className='status__img' src={logo} alt="img" />
+                    <img className='status__img sent' src={logo} alt="img" />
                     <h2 className='status__heading'>Din beställning är på väg!</h2>
                     <h3 className='status__eta'><span>{eta}</span> minuter</h3>
                     <button className='btn btn--light' onClick={handleClick}>Ok, cool!</button>
