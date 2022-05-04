@@ -3,10 +3,6 @@ import { useState } from 'react';
 import close from '../assets/graphics/close.svg';
 import './Nav.css';
 
-
-
-
-
 function Nav() {
 
     const navigate = useNavigate();

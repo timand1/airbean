@@ -16,7 +16,6 @@
 }
 .status__img {
     width: 250px;
-  
     margin: 2.5rem;
 }
 
@@ -36,7 +35,7 @@
     color: #fff;
     
 }
-.status__eta span{
+.status__eta span {
     font-weight: 700;    
 }
 
