@@ -6,20 +6,15 @@ import { addProduct } from '../redux/actions/productAction';
 
 export default function ProductItems(props) {
     const { product, id } = props;
-
     const dispatch = useDispatch();
-
     function addToCart() {
         dispatch(addProduct(product))
     }
 
     return (
-        <section id={id} className="flex menu-item">
-            
+        <section id={id} className="flex menu-item">            
             <div className='flex product-container'>
-
                 <div className='flex'>
-
                     <div className='flex btn-container'>
                         <button style={{ backgroundImage: `url(${addButton})` }} className='add-button' onClick={addToCart}></button>
                     </div>                   

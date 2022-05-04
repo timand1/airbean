@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/graphics/drone.svg';
 
-import { emptyCart } from '../redux/actions/productAction'
-
+import { emptyCart } from '../redux/actions/productAction';
 
 function Status() {
     const [orderNumber, setOrderNumber] = useState();
@@ -25,8 +24,8 @@ function Status() {
     }, []);
 
     function handleClick() {
-        dispatch(emptyCart())
-        navigate('/menu')
+        dispatch(emptyCart());
+        navigate('/menu');
     }
 
     return (

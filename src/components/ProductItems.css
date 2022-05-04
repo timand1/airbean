@@ -1,24 +1,10 @@
-.flex {
-    display: flex;
-}
+.col {flex-direction: column;}
 
-.col {
-    flex-direction: column;
-}
-
-.flex {
-    display: flex;
-}
-
-.col {
-    flex-direction: column;
-}
-
+.flex {display: flex;}
 
 .menu-item {
     justify-content: center;
 }
-
 
 .product-title {
     font-size: 20px;

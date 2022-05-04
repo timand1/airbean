@@ -19,11 +19,11 @@ export default function Header(props) {
     const dispatch = useDispatch();
 
     function displayCart() {
-        setShowCart(!showCart)
+        setShowCart(!showCart);
     }
 
     useEffect(() => {
-        checkDiscount()
+        checkDiscount();
     }, [productList])
 
     function checkDiscount() {
@@ -32,12 +32,12 @@ export default function Header(props) {
 
         if (bryggAmount.length > 0 && gustavAmount.length > 0) {
             if (bryggAmount > gustavAmount) {
-                dispatch(addDiscount(gustavAmount.length))
+                dispatch(addDiscount(gustavAmount.length));
             } else {
-                dispatch(addDiscount(bryggAmount.length))
+                dispatch(addDiscount(bryggAmount.length));
             }
         } else {
-            dispatch(addDiscount(0))
+            dispatch(addDiscount(0));
         }
     }
 
@@ -47,7 +47,7 @@ export default function Header(props) {
 
     return (
         <header className='nav'>
-            <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
+            <div className='nav-btn' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
             {showCartButton &&
                 <button className='cart' onClick={(displayCart)}>
@@ -68,7 +68,7 @@ export default function Header(props) {
                     <button className='button button-cart' onClick={() => navigate('/loading')}>Take my money!</button>
                 </section>}
             {cartList.length > 0 &&
-                <section className='cart-overlay' style={showCart ? { display: 'block' } : { display: 'none' }}  >
+                <section className='cart-overlay' onClick={(displayCart)} style={showCart ? { display: 'block' } : { display: 'none' }}  >
                 </section>}
 
         </header>
