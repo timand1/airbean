@@ -63,6 +63,7 @@ export default function Header(props) {
                     <article className="cart-price">
                         <h2>Total {totalCost - totalDiscount} kr</h2>
                         <p>inkl moms + drönarleverans</p>
+                        {totalDiscount > 0 ? <div className='cart-discount'> <p className="cart-items">Rabatt {totalDiscount} kr</p></div> : ''}
                     </article>
                     <button className='button button-cart' onClick={() => navigate('/loading')}>Take my money!</button>
                 </section>}

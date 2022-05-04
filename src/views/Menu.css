@@ -29,3 +29,26 @@
 .graphics-footer {
     bottom: 0;
 }
+
+.menu-combo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+    padding: 1rem;
+    margin-top: 2rem;
+    gap: 0.4rem;
+    border-radius: 25px;
+    background: #E5674E;
+    box-shadow: inset 8px 8px 12px #d05e47,
+        inset -8px -8px 12px #fa7055;
+}
+
+.menu-combo h3 {
+    font-size: 24px;
+}
+
+.italic {
+    font-size: 12px;
+    font-style: italic;
+}

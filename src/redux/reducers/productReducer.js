@@ -44,7 +44,7 @@ const productReducer = (state = initialState, action) => {
         case 'LOCAL_CART':
             let price = 0;
             const localArray = [...action.payload];
-            console.log(localArray)
+
             for (let i = 0; i < localArray.length; i++) {
                 price += localArray[i].price;
             }

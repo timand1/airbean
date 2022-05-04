@@ -89,7 +89,7 @@
 }
 
 .cart-price {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .cart-price h2 {
@@ -99,6 +99,11 @@
 
 .cart-price p {
     font-size: 12px;
+}
+
+.cart-discount {
+    display: flex;
+    gap: 1rem;
 }
 
 .button-cart {

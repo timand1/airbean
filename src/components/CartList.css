@@ -6,16 +6,28 @@
 .cart-title {
     font-size: 20px;
     font-weight: 700;
-    float: left;
+    /* float: left;
     width: 300px;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
 }
 
-.cart-title:after {
+/* .cart-title:after {
     font-size: .8rem;
     color: #00000040;
     content: " .........................................................................................."
+} */
+
+.dots {
+    flex: 1;
+    /* border-bottom: 1px dotted #000; */
+    height: 1.3rem;
+    margin: 0 0.2rem;
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+
 }
 
 .cart-price {
