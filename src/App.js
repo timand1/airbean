@@ -22,7 +22,7 @@ function App() {
     }
   }, [])
 
-  const [showCartButton, setShowCartButton] = useState(true)
+  const [showCartButton, setShowCartButton] = useState(true);
 
   return (
     <div className="App">

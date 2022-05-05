@@ -16,14 +16,19 @@ export default function Header(props) {
     const navigate = useNavigate();
 
     const [showCart, setShowCart] = useState(false)
+
     const dispatch = useDispatch();
 
     function displayCart() {
-        setShowCart(!showCart);
+        setShowCart(!showCart)
     }
 
     useEffect(() => {
-        checkDiscount();
+        checkDiscount()
+
+        if (productList.length === 0) {
+            setShowCart(false)
+        }
     }, [productList])
 
     function checkDiscount() {
@@ -32,12 +37,12 @@ export default function Header(props) {
 
         if (bryggAmount.length > 0 && gustavAmount.length > 0) {
             if (bryggAmount > gustavAmount) {
-                dispatch(addDiscount(gustavAmount.length));
+                dispatch(addDiscount(gustavAmount.length))
             } else {
-                dispatch(addDiscount(bryggAmount.length));
+                dispatch(addDiscount(bryggAmount.length))
             }
         } else {
-            dispatch(addDiscount(0));
+            dispatch(addDiscount(0))
         }
     }
 
@@ -47,14 +52,15 @@ export default function Header(props) {
 
     return (
         <header className='nav'>
-            <div className='nav-btn' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
+            <div className='nav-btn ' onClick={() => navigate('/nav')} style={{ backgroundImage: `url(${navButton})` }}>
             </div>
             {showCartButton &&
                 <button className='cart' onClick={(displayCart)}>
                     <span className="material-symbols-outlined">
                         lock
                     </span>
-                    <p className="cart-counter">{productList.length}</p>
+                    {productList.length > 0 &&
+                        <p className="cart-counter">{productList.length}</p>}
                 </button>}
             {cartList.length > 0 &&
                 <section className='cart-list' style={showCart ? { display: 'flex' } : { display: 'none' }}  >
@@ -62,8 +68,8 @@ export default function Header(props) {
                     <article className="cart-items">{cartList}</article>
                     <article className="cart-price">
                         <h2>Total {totalCost - totalDiscount} kr</h2>
-                        <p>inkl moms + drönarleverans</p>
                         {totalDiscount > 0 ? <div className='cart-discount'> <p className="cart-items">Rabatt {totalDiscount} kr</p></div> : ''}
+                        <p>inkl moms + drönarleverans</p>
                     </article>
                     <button className='button button-cart' onClick={() => navigate('/loading')}>Take my money!</button>
                 </section>}
