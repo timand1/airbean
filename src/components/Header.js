@@ -8,7 +8,7 @@ import CartList from "./CartList"
 import navButton from '../assets/graphics/navicon.svg'
 
 export default function Header(props) {
-    const { showCartButton } = props
+    const { showCartButton, setOrderConfirmed } = props
     const productList = useSelector(state => state.products);
     const totalCost = useSelector(state => state.totalCost);
     const totalDiscount = useSelector(state => state.discount);
@@ -21,6 +21,11 @@ export default function Header(props) {
 
     function displayCart() {
         setShowCart(!showCart)
+    }
+
+    function confirmOrder () {
+        setOrderConfirmed(true);
+        navigate('/loading');
     }
 
     useEffect(() => {
@@ -71,7 +76,7 @@ export default function Header(props) {
                         {totalDiscount > 0 ? <div className='cart-discount'> <p className="cart-items">Rabatt {totalDiscount} kr</p></div> : ''}
                         <p>inkl moms + drönarleverans</p>
                     </article>
-                    <button className='button button-cart' onClick={() => navigate('/loading')}>Take my money!</button>
+                    <button className='button button-cart' onClick={confirmOrder}>Take my money!</button>
                 </section>}
             {cartList.length > 0 &&
                 <section className='cart-overlay' onClick={(displayCart)} style={showCart ? { display: 'block' } : { display: 'none' }}  >

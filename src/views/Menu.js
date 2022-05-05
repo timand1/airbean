@@ -6,7 +6,7 @@ import headerGraphic from '../assets/graphics/graphics-header.svg';
 import footerGraphic from '../assets/graphics/graphics-footer.svg';
 
 export default function Menu(props) {
-    const { showCartButton, setShowCartButton } = props
+    const { showCartButton, setShowCartButton, setOrderConfirmed } = props
     useEffect(() => {
         setShowCartButton(true)
     }, [])
@@ -27,7 +27,7 @@ export default function Menu(props) {
     return (
         <section className="menu">
             <img src={headerGraphic} alt="leaves" className="graphics graphics-header" />
-            <Header showCartButton={showCartButton} />
+            <Header showCartButton={showCartButton} setOrderConfirmed= {setOrderConfirmed} />
             <h1 className="menu-headline">Meny</h1>
             <article className="products">{productItem}</article>
             <article className="menu-combo">

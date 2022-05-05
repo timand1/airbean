@@ -6,7 +6,8 @@ import logo from '../assets/graphics/drone.svg';
 
 import { emptyCart } from '../redux/actions/productAction';
 
-function Status() {
+function Status(props) {
+    const {setOrderConfirmed, orderConfirmed} = props;
     const [orderNumber, setOrderNumber] = useState();
     const [eta, setEta] = useState();
     const productList = useSelector(state => state.products);
@@ -24,13 +25,14 @@ function Status() {
     }, []);
 
     function handleClick() {
-        dispatch(emptyCart());
         navigate('/menu');
+        dispatch(emptyCart());
+        setOrderConfirmed(false);
     }
 
     return (
         <article>
-            {productList.length > 0 &&
+            {orderConfirmed &&
                 <section className='status'>
                     <p className="status__orderNr">Ordernummer <span>#{orderNumber}</span></p>
                     <img className='status__img sent' src={logo} alt="img" />
@@ -38,12 +40,12 @@ function Status() {
                     <h3 className='status__eta'><span>{eta}</span> minuter</h3>
                     <button className='btn btn--light' onClick={handleClick}>Ok, cool!</button>
                 </section>}
-            {productList.length === 0 &&
+            {!orderConfirmed &&
                 <section className='status'>
                     <p className="status__orderNr"></p>
                     <img className='status__img' src={logo} alt="img" />
                     <h2 className='status__heading'>Ooops, här var det tomt</h2>
-                    <button className='btn btn--light' onClick={handleClick}> Give me coffeeee!</button>
+                    <button className='btn btn--light' onClick={() => {navigate('/menu')}}> Give me coffeeee!</button>
                 </section>}
         </article>
     )

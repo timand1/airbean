@@ -23,16 +23,17 @@ function App() {
   }, [])
 
   const [showCartButton, setShowCartButton] = useState(true);
+  const [orderConfirmed, setOrderConfirmed] = useState(false)
 
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/about' element={<About showCartButton={showCartButton} setShowCartButton={setShowCartButton} />} />
-        <Route path='/menu' element={<Menu showCartButton={showCartButton} setShowCartButton={setShowCartButton} />} />
+        <Route path='/menu' element={<Menu showCartButton={showCartButton} setShowCartButton={setShowCartButton} setOrderConfirmed= {setOrderConfirmed} />} />
         <Route path='/nav' element={<Nav />} />
         <Route path='/loading' element={<Loading />} />
-        <Route path='/status' element={<Status />} />
+        <Route path='/status' element={<Status setOrderConfirmed= {setOrderConfirmed} orderConfirmed={orderConfirmed}/>} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </div>
