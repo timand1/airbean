@@ -10,7 +10,6 @@ function Status(props) {
     const {setOrderConfirmed, orderConfirmed} = props;
     const [orderNumber, setOrderNumber] = useState();
     const [eta, setEta] = useState();
-    const productList = useSelector(state => state.products);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
