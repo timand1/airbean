@@ -32,7 +32,7 @@ export default function Menu(props) {
             <article className="products">{productItem}</article>
             <article className="menu-combo">
                 <h2>Göteborg 400 år <span className="italic">ish</span></h2>
-                <p>Brygkaffe & Gustav Adolfsbakelse combo</p>
+                <p>Bryggkaffe & Gustav Adolfsbakelse combo</p>
                 <h3>40 kr</h3>
             </article>
             <img src={footerGraphic} alt="leaves" className="graphics graphics-footer" />
