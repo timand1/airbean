@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addDiscount } from '../redux/actions/productAction';
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import CartList from "./CartList"
+import CartList from "./CartList";
 
-import navButton from '../assets/graphics/navicon.svg'
+import navButton from '../assets/graphics/navicon.svg';
+import cartIcon from '../assets/graphics/bag.svg';
 
 export default function Header(props) {
     const { showCartButton, setOrderConfirmed } = props
@@ -63,9 +64,7 @@ export default function Header(props) {
             </div>
             {showCartButton &&
                 <button className='cart' onClick={(displayCart)}>
-                    <span className="material-symbols-outlined">
-                        lock
-                    </span>
+                    <img src={cartIcon} alt="leaves" className="cart-icon" />
                     {productList.length > 0 &&
                         <p className="cart-counter">{productList.length}</p>}
                 </button>}

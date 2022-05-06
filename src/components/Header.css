@@ -33,10 +33,6 @@
     z-index: 1;
 }
 
-.cart .material-symbols-outlined {
-    color: #FFF;
-}
-
 .cart-counter {
     position: absolute;
     top: -2px;
