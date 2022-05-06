@@ -16,12 +16,12 @@
     background-position: bottom;
     background-size: 5px 1px;
     background-repeat: repeat-x;
-
 }
 
 .cart-price {
     font-size: 12px;
     font-family: 'Work Sans', sans-serif;
+    margin-bottom: 2rem;
 }
 
 .cart-amount {
