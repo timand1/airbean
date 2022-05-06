@@ -23,7 +23,7 @@ export default function Header(props) {
         setShowCart(!showCart)
     }
 
-    function confirmOrder () {
+    function confirmOrder() {
         setOrderConfirmed(true);
         navigate('/loading');
     }
@@ -40,6 +40,7 @@ export default function Header(props) {
         const gustavAmount = productList.filter(product => product.title === 'Gustav Adolfsbakelse')
         const bryggAmount = productList.filter(product => product.title === 'Bryggkaffe')
 
+        // Determines amount of discount depending on the lenght of the lowest product
         if (bryggAmount.length > 0 && gustavAmount.length > 0) {
             if (bryggAmount > gustavAmount) {
                 dispatch(addDiscount(gustavAmount.length))
@@ -51,6 +52,7 @@ export default function Header(props) {
         }
     }
 
+    // Returns a unique array with only 1 of each value
     const uniqueCart = [...new Map(productList.map((cartItem) => [cartItem['id'], cartItem])).values(),];
 
     const cartList = uniqueCart.map((product, index) => <CartList product={product} key={index} id={product.id} checkDiscount={checkDiscount} />);
