@@ -50,7 +50,6 @@
 .cart-headline {
     margin-bottom: 2rem;
     font-size: 32px;
-    font-weight: 700;
     text-align: center;
 }
 
@@ -64,8 +63,7 @@
     padding: 2rem 1.5rem;
     z-index: 2;
     flex-direction: column;
-    justify-content: space-between;
-    height: fit-content;
+    height: 90%;
 }
 
 .cart-items {
@@ -86,7 +84,22 @@
 }
 
 .cart-price {
+    margin-top: auto;
     margin-bottom: 2rem;
+}
+
+.dots {
+    flex: 1;
+    height: 1.3rem;
+    margin: 0 0.2rem;
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+}
+
+.dots__total {
+    height: 24px;
 }
 
 .cart-price h2 {

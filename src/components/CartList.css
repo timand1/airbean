@@ -8,16 +8,6 @@
     font-weight: 700;
 }
 
-.dots {
-    flex: 1;
-    height: 1.3rem;
-    margin: 0 0.2rem;
-    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 5px 1px;
-    background-repeat: repeat-x;
-}
-
 .cart-item__price {
     font-size: 12px;
     font-family: 'Work Sans', sans-serif;

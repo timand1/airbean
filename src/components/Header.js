@@ -73,7 +73,11 @@ export default function Header(props) {
                     <h2 className='cart-headline'>Din Beställning</h2>
                     <article className="cart-items">{cartList}</article>
                     <article className="cart-price">
-                        <h2>Total {totalCost - totalDiscount} kr</h2>
+                        <div className="flex">
+                            <h2>Total</h2>
+                            <div className='dots dots__total'></div>
+                            <h2>{totalCost - totalDiscount} kr</h2>
+                        </div>
                         {totalDiscount > 0 ? <div className='cart-discount'> <p className="cart-items">Rabatt {totalDiscount} kr</p></div> : ''}
                         <p>inkl moms + drönarleverans</p>
                     </article>
