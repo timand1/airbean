@@ -6,15 +6,6 @@
     flex-direction: column;
 }
 
-/* .flex {
-    display: flex;
-} */
-
-.col {
-    flex-direction: column;
-}
-
-
 .menu-item {
     justify-content: center;
 }
