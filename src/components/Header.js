@@ -1,7 +1,7 @@
 import './Header.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addDiscount } from '../redux/actions/productAction';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CartList from "./CartList";
 
@@ -9,14 +9,14 @@ import navButton from '../assets/graphics/navicon.svg';
 import cartIcon from '../assets/graphics/bag.svg';
 
 export default function Header(props) {
-    const { showCartButton, setOrderConfirmed } = props
+    const { showCartButton, setOrderConfirmed } = props;
     const productList = useSelector(state => state.products);
     const totalCost = useSelector(state => state.totalCost);
     const totalDiscount = useSelector(state => state.discount);
 
     const navigate = useNavigate();
 
-    const [showCart, setShowCart] = useState(false)
+    const [showCart, setShowCart] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -30,26 +30,26 @@ export default function Header(props) {
     }
 
     useEffect(() => {
-        checkDiscount()
+        checkDiscount();
 
         if (productList.length === 0) {
             setShowCart(false)
-        }
+        };
     }, [productList])
 
     function checkDiscount() {
-        const gustavAmount = productList.filter(product => product.title === 'Gustav Adolfsbakelse')
-        const bryggAmount = productList.filter(product => product.title === 'Bryggkaffe')
+        const gustavAmount = productList.filter(product => product.title === 'Gustav Adolfsbakelse');
+        const bryggAmount = productList.filter(product => product.title === 'Bryggkaffe');
 
         // Determines amount of discount depending on the lenght of the lowest product
         if (bryggAmount.length > 0 && gustavAmount.length > 0) {
             if (bryggAmount > gustavAmount) {
-                dispatch(addDiscount(gustavAmount.length))
+                dispatch(addDiscount(gustavAmount.length));
             } else {
-                dispatch(addDiscount(bryggAmount.length))
+                dispatch(addDiscount(bryggAmount.length));
             }
         } else {
-            dispatch(addDiscount(0))
+            dispatch(addDiscount(0));
         }
     }
 

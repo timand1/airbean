@@ -3,7 +3,7 @@
     justify-content: space-between;
 }
 
-.cart-title {
+.cart-item__title {
     font-size: 20px;
     font-weight: 700;
 }
@@ -18,13 +18,13 @@
     background-repeat: repeat-x;
 }
 
-.cart-price {
+.cart-item__price {
     font-size: 12px;
     font-family: 'Work Sans', sans-serif;
     margin-bottom: 2rem;
 }
 
-.cart-amount {
+.cart-item__amount {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
     transform: translateY(-6px);
 }
 
-.cart-button {
+.cart-item__button {
     border: none;
     background: transparent;
     width: 15px;

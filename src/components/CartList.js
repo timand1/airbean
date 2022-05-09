@@ -1,4 +1,4 @@
-import './CartList.css'
+import './CartList.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addProduct, removeProduct } from '../redux/actions/productAction';
@@ -15,26 +15,26 @@ export default function CartList(props) {
     let amount = uniqueProduct.length;
 
     function removeCart() {
-        dispatch(removeProduct(product))
+        dispatch(removeProduct(product));
         checkDiscount();
     }
 
     function addCart() {
-        dispatch(addProduct(product))
+        dispatch(addProduct(product));
         checkDiscount();
     }
 
     return (
         <section id={product.id} className='cart-item' >
             <article>
-                <p className='cart-title'>{product.title}</p>
-                <p className='cart-price'>{product.price * amount} kr</p>
+                <p className='cart-item__title'>{product.title}</p>
+                <p className='cart-item__price'>{product.price * amount} kr</p>
             </article>
             <div className='dots'></div>
-            <article className='cart-amount'>
-                <button className='cart-button' style={{ backgroundImage: `url(${upArrow})` }} onClick={addCart}></button>
+            <article className='cart-item__amount'>
+                <button className='cart-item__button' style={{ backgroundImage: `url(${upArrow})` }} onClick={addCart}></button>
                 <p>{amount}</p>
-                <button className='cart-button' style={{ backgroundImage: `url(${downArrow})` }} onClick={removeCart} ></button>
+                <button className='cart-item__button' style={{ backgroundImage: `url(${downArrow})` }} onClick={removeCart} ></button>
             </article>
         </section>
     )

@@ -86,13 +86,17 @@
     border-bottom: 15px solid #FFF;
 }
 
+.cart-price {
+    margin-bottom: 2rem;
+}
+
 .cart-price h2 {
     font-size: 24px;
-    font-family: 'PT Serif', serif;
 }
 
 .cart-price p {
     font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .cart-discount {

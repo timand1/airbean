@@ -1,6 +1,6 @@
-import loader from '../assets/graphics/loader.png'
+import loader from '../assets/graphics/loader.png';
 import { useNavigate } from 'react-router-dom';
-import '../views/Loading.css'
+import '../views/Loading.css';
 import { useEffect } from 'react';
 
 function Loading() {
